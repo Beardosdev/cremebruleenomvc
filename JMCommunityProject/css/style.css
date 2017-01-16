@@ -56,7 +56,7 @@ html, body {
 	right: -320px;
 	width: 300px;
 	z-index: 60;
-	padding-top: 0;
+	padding-top: 6em;
 	background-color: #fafafa;
 	bottom: 0;
 	top: 0;
@@ -64,10 +64,15 @@ html, body {
 	box-shadow: -5px 0 5px 5px rgba(0,0,0,0.5);
 }
 
-.my-nav p {
+.menu-icon .close, .menu-icon p {
     color: #4f4f4f;
-    font-size: 1.2em;
-    padding: 2.6em 2em;
+    font-size: 1.3em;
+    position: fixed;
+    display: none;
+    right: 125px;
+    top: 55px;
+    z-index: 65;
+    opacity: 1;
 }
 
 .my-nav .list-group, .list-group-item.list-group-item-action {
