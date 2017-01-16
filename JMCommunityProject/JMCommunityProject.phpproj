@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>JMCommunityProject</Name>
+    <ProjectGuid>{0a42c467-0f91-4137-9da5-e1559bea7e2b}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <Runtime>PHP</Runtime>
+    <RuntimeVersion>7.0</RuntimeVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="css\bootstrap\css\bootstrap-theme.css" />
+    <Compile Include="css\bootstrap\css\bootstrap-theme.css.map" />
+    <Compile Include="css\bootstrap\css\bootstrap-theme.min.css" />
+    <Compile Include="css\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Compile Include="css\bootstrap\css\bootstrap.css" />
+    <Compile Include="css\bootstrap\css\bootstrap.css.map" />
+    <Compile Include="css\bootstrap\css\bootstrap.min.css" />
+    <Compile Include="css\bootstrap\css\bootstrap.min.css.map" />
+    <Compile Include="css\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Compile Include="css\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Compile Include="css\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Compile Include="css\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Compile Include="css\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Compile Include="css\bootstrap\js\bootstrap.js" />
+    <Compile Include="css\bootstrap\js\bootstrap.min.js" />
+    <Compile Include="css\bootstrap\js\npm.js" />
+    <Compile Include="css\style.css" />
+    <Compile Include="images\bg.jpg" />
+    <Compile Include="pages\footer.html" />
+    <Compile Include="pages\header.html" />
+    <Compile Include="pages\index.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="clientCode" />
+    <Folder Include="css\bootstrap\css" />
+    <Folder Include="css\bootstrap\fonts" />
+    <Folder Include="css\bootstrap\js" />
+    <Folder Include="css\bootstrap" />
+    <Folder Include="css" />
+    <Folder Include="images" />
+    <Folder Include="pages" />
+    <Folder Include="serverCode" />
+  </ItemGroup>
+</Project>
