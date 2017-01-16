@@ -23,8 +23,72 @@ html, body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
+	font-family: Arial, sans-serif;
 }
 
+/*Navigation Style*/
+
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    right: 4em;
+    top: 2em;
+    z-index: 65;
+    background-color: #1d1d1d;
+    padding: 1em 1.2em;
+    border-radius: 5em;
+    border: solid 1px #c5b358;
+    -webkit-box-shadow: 5px 0 5px 5px rgba(0,0,0,0.5);
+	box-shadow: 5px 0 5px 5px rgba(0,0,0,0.5);
+}
+
+.bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 3px;
+    background-color: #fafafa;
+    margin: 5px 0;
+    transition: 0.7s;
+}
+
+.my-nav {
+	position: fixed;
+	right: -320px;
+	width: 300px;
+	z-index: 60;
+	padding-top: 0;
+	background-color: #fafafa;
+	bottom: 0;
+	top: 0;
+	-webkit-box-shadow: -5px 0 5px 5px rgba(0,0,0,0.5);
+	box-shadow: -5px 0 5px 5px rgba(0,0,0,0.5);
+}
+
+.my-nav p {
+    color: #4f4f4f;
+    font-size: 1.2em;
+    padding: 2.6em 2em;
+}
+
+.my-nav .list-group, .list-group-item.list-group-item-action {
+	color: #4f4f4f;
+	background-color: #fafafa;
+	border-radius: 0;
+	border-left: none;
+	border-color: #dfdfdf;
+	font-size: 1.1em;
+}
+
+.list-group-item.list-group-item-action {
+	padding: 1em;
+}
+
+.list-group-item.list-group-item-action:hover {
+	background-color: #1d1d1d;
+	color: #fafafa;
+}
+
+/*Pages*/
 .container-fluid {
 	background-color: #1d1d1d;
 	margin: 0;
@@ -47,16 +111,6 @@ html, body {
 
 .white {
 	height: 64em;
-}
-
-.blue {
-	background-color: blue;
-	z-index: 500;
-}
-
-.red {
-	background-color: red;
-	z-index: 500;
 }
 
 p, .hero h1 {color: white;}
