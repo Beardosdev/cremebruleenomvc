@@ -1,14 +1,19 @@
 ﻿$(document).ready(function() {
 
-    $(".days").append("<li>Hello world!</li>");
 
-    //function currentMonth() {
+    
 
-    //    //array to 
-    //    var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July',
-    //	'August', 'September', 'October', 'November', 'December');
-    //    var month = getMonth();
+    var d = new Date();
+    var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+    var m = months[d.getMonth()];
+    
+    $(".output").append("<h1>" + m + "</h1><br>");
 
-    //    $("#output").html(response);
+    day = d.getDate();
+    dayWeek = d.getDay();
+    
+    popMonth = d - day;
+    alert(dayWeek.toString());
+    $(".days").append("<li>"+ day +"</li>");
 
 });
