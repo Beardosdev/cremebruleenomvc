@@ -2,12 +2,20 @@
 	include('header.html');
 
 	echo "
+    <div class='container-fluid bg'>
+        <h1 class='bigtitle'>JM</h1>
+        <a href='events.php'>
+            <div class='herocol' id='hero1'>
+                <div class='shader'></div>
+            </div>
+        </a>
+        <a href='food.php'>
+            <div class='herocol' id='hero2'>
+                <div class='shader'></div>
+            </div>
+        </a>
 
-	<div class='hero'>
-
-		<h1> JM </h1>
-
-	</div>
+    </div>
 
 	<div class='white'>
 

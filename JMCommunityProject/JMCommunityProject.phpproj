@@ -35,7 +35,10 @@
     <Compile Include="css\bootstrap\js\bootstrap.min.js" />
     <Compile Include="css\bootstrap\js\npm.js" />
     <Compile Include="images\bg.jpg" />
+    <Compile Include="pages\events.php" />
+    <Compile Include="pages\food.php" />
     <Compile Include="pages\index.php" />
+    <Compile Include="pages\links.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="clientCode" />
@@ -52,6 +55,8 @@
     <Content Include="clientCode\jquery-1.12.2.min.js" />
     <Content Include="clientCode\siteCode.js" />
     <Content Include="css\style.css" />
+    <Content Include="images\hero1.jpg" />
+    <Content Include="images\hero2.jpg" />
     <Content Include="pages\footer.html" />
     <Content Include="pages\header.html" />
   </ItemGroup>

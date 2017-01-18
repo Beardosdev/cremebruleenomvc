@@ -23,7 +23,9 @@ html, body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	font-family: Arial, sans-serif;
+	font-family: 'Montserrat', sans-serif;
+    -webkit-transition: ease-in-out 200ms;
+    transition: ease-in-out 200ms;
 }
 
 /*Navigation Style*/
@@ -32,15 +34,17 @@ html, body {
     display: inline-block;
     cursor: pointer;
     position: fixed;
-    right: 4em;
-    top: 2em;
+    right: 2.5%;
+    top: 0.3em;
     z-index: 65;
     background-color: #1d1d1d;
     padding: 1em 1.2em;
     border-radius: 5em;
     border: solid 1px #c5b358;
-    -webkit-box-shadow: 5px 0 5px 5px rgba(0,0,0,0.5);
-	box-shadow: 5px 0 5px 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    -webkit-transition: ease-in-out 300ms;
+    transition: ease-in-out 300ms;
 }
 
 .bar1, .bar2, .bar3 {
@@ -64,17 +68,6 @@ html, body {
 	box-shadow: -5px 0 5px 5px rgba(0,0,0,0.5);
 }
 
-.menu-icon .close, .menu-icon p {
-    color: #4f4f4f;
-    font-size: 1.3em;
-    position: fixed;
-    display: none;
-    right: 125px;
-    top: 55px;
-    z-index: 65;
-    opacity: 1;
-}
-
 .my-nav .list-group, .list-group-item.list-group-item-action {
 	color: #4f4f4f;
 	background-color: #fafafa;
@@ -93,25 +86,44 @@ html, body {
 	color: #fafafa;
 }
 
+.menu-icon:hover {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.bigshader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: none;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/*Mobile Header*/
+#mobileheader {
+    height: 75px;
+    color: #1d1d1d;
+    background-color: #fafafa;
+}
+
+.title {font-size: 2em;}
+
+#mobileheader p {
+    padding: 1em 0.5em;
+}
+
+
 /*Pages*/
+
 .container-fluid {
 	background-color: #1d1d1d;
 	margin: 0;
 	padding: 0;
-}
-
-.hero {
-	background: url(../images/bg.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-  	position: absolute;
-	padding: 10em 5em;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
+    z-index: -2;
 }
 
 .white {
@@ -120,20 +132,52 @@ html, body {
 
 p, .hero h1 {color: white;}
 
-.hero h1 {
-	text-align: center;
-	font-size: 5em;
-	text-shadow: 5px 5px 5px #030000;
-}
-
 footer {
 	color: #fff;
 	text-align: center;
 }
 
 @media only screen and (min-width : 320px) {
-        
+    
+    /*Index*/
+    .herocol {
+        width: 100%;
+        float: left;
+    }
+
+    #hero1, #hero2, #hero3 {
+        height: 250px;
+        margin-bottom: 3px;
+    }
+
+    #hero1 {
+        background: url("../images/hero1.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    #hero2 {
+        background: url("../images/hero2.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    .shader {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        -webkit-transition: ease-in-out 400ms;
+        transition: ease-in-out 400ms;
+    }
+
+    .shader:hover {
+        background-color: rgba(0,0,0,0);
+    }
+
+    .bigtitle {
+        display: none;
+    }
+    
 }
+        
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
@@ -143,6 +187,58 @@ footer {
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 
+    .container-fluid.bg {
+        padding: 14em 0em;
+    }
+
+    .bigtitle {
+        position: relative;
+        color: #f5f5f5;
+        text-align: center;
+        width: 600px;
+        background-color: rgba(0,0,0,0.5);
+        border: solid 4px #fafafa;
+        border-radius: 400px;
+        cursor:pointer;
+        -webkit-transition: ease-in-out 400ms;
+        transition: ease-in-out 400ms;
+        z-index: 5;
+        display: initial;
+    }
+
+    .bigtitle:hover {
+        font-size: 8em;
+        border: solid 8px #fafafa;
+    }
+
+    #mobileheader {display: none;}
+    
+    .menu-icon {
+        right: 4em;
+        top: 2em;
+    }
+    .menu-icon .close, .menu-icon p {
+        top: 55px;
+        right: 125px;
+    }
+
+    #hero1, #hero2 {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        width: 49.8%;
+        height: initial;
+        margin-bottom: 0;
+        z-index: 0;
+    }
+
+    #hero1 {
+        left: 0;
+    }
+
+    #hero2 {
+        right: 0;
+    }
 }
 
 /* Medium Devices, Desktops */
@@ -153,4 +249,15 @@ footer {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
+}
+
+@media only screen and (min-width : 1600px) {
+    .bigtitle {
+        text-align: center;
+        width: 500px;        
+    }
+
+    .container-fluid.bg {
+        padding: 20em 0em;
+    }
 }
